@@ -293,13 +293,15 @@ async function readFirestoreDatabase(): Promise<Database | null> {
 async function writeFirestoreDatabase(database: Database) {
   const firestore = await getServerFirestore();
   const writer = firestore.bulkWriter();
+  const completedDocuments = new Map<string, string>();
+  const pendingWrites: Promise<unknown>[] = [];
   let writes = 0;
   const save = (key: string, reference: FirebaseFirestore.DocumentReference, value: unknown) => {
     const cleanValue = JSON.parse(JSON.stringify(value));
     const serialized = JSON.stringify(cleanValue);
     if (persistedDocuments.get(key) === serialized) return;
-    persistedDocuments.set(key, serialized);
-    writer.set(reference, cleanValue);
+    completedDocuments.set(key, serialized);
+    pendingWrites.push(writer.set(reference, cleanValue));
     writes += 1;
   };
   save(
@@ -327,7 +329,16 @@ async function writeFirestoreDatabase(database: Database) {
       );
     }
   }
-  if (writes) await writer.close();
+  if (writes) {
+    const completions = Promise.allSettled(pendingWrites);
+    await writer.close();
+    const results = await completions;
+    const failed = results.find((result) => result.status === "rejected");
+    if (failed?.status === "rejected") throw failed.reason;
+    for (const [key, serialized] of completedDocuments) {
+      persistedDocuments.set(key, serialized);
+    }
+  }
 }
 
 async function readDatabase(): Promise<Database> {
@@ -829,10 +840,13 @@ export async function getAuctionRoom(code: string) {
   const database = await readDatabase();
   const room = database.rooms.find((item) => item.code === code.toUpperCase());
   if (!room || room.stage !== "auction") return null;
+  const previousAuction = JSON.stringify(room.auction);
   const auction = ensureAuction(room);
   if (!auction.paused) processAuctionTick(room);
-  startSeasonWhenAuctionIsReady(room);
-  await writeDatabase(database);
+  const seasonStarted = startSeasonWhenAuctionIsReady(room);
+  if (seasonStarted || JSON.stringify(room.auction) !== previousAuction) {
+    await writeDatabase(database);
+  }
   return room;
 }
 

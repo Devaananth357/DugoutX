@@ -1,0 +1,2 @@
+import { createUser } from "@/lib/local-db";
+export async function POST(request:Request){try{const {name,email,password}=await request.json();if(!name||!email||!password||password.length<8)return Response.json({error:"Enter valid account details."},{status:400});return Response.json({user:await createUser(name,email,password)});}catch(error){return Response.json({error:error instanceof Error&&error.message==="EMAIL_EXISTS"?"An account already exists for this email.":"Could not create account."},{status:409});}}

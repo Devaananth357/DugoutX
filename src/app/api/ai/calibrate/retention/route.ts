@@ -1,0 +1,2 @@
+import { calibrateRetentionAi, calibrateRetentionAuction, calibrateSheetAuction, createCalibrationPool } from "@/lib/ai";
+export async function GET(request:Request){const value=Number(new URL(request.url).searchParams.get("runs")||100);const runs=Math.max(1,Math.min(300,value));const rosters=Array.from({length:runs},(_,index)=>createCalibrationPool(`retention-roster-${index}`,25));return Response.json({retention:calibrateRetentionAi(rosters),fullAuction:calibrateRetentionAuction(runs),sheetAuction:calibrateSheetAuction(runs)},{headers:{"Cache-Control":"no-store"}});}

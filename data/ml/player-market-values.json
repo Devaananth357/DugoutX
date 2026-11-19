@@ -1,0 +1,2702 @@
+{
+  "1": {
+    "name": "MS Dhoni",
+    "team": "CSK",
+    "minValue": 13.5,
+    "marketValue": 16.0,
+    "maxValue": 18.5,
+    "retentionProbability": 0.866,
+    "labelSource": "ENGINEERED"
+  },
+  "2": {
+    "name": "Ruturaj Gaikwad",
+    "team": "CSK",
+    "minValue": 15.0,
+    "marketValue": 17.0,
+    "maxValue": 18.5,
+    "retentionProbability": 0.916,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "3": {
+    "name": "Sanju Samson",
+    "team": "CSK",
+    "minValue": 13.0,
+    "marketValue": 15.5,
+    "maxValue": 17.0,
+    "retentionProbability": 0.907,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "4": {
+    "name": "Shivam Dube",
+    "team": "CSK",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.5,
+    "retentionProbability": 0.265,
+    "labelSource": "ENGINEERED"
+  },
+  "5": {
+    "name": "Ayush Mhatre",
+    "team": "CSK",
+    "minValue": 4.0,
+    "marketValue": 5.5,
+    "maxValue": 7.5,
+    "retentionProbability": 0.357,
+    "labelSource": "ENGINEERED"
+  },
+  "6": {
+    "name": "Dewald Brevis",
+    "team": "CSK",
+    "minValue": 2.0,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.274,
+    "labelSource": "ENGINEERED"
+  },
+  "7": {
+    "name": "Urvil Patel",
+    "team": "CSK",
+    "minValue": 4.5,
+    "marketValue": 6.5,
+    "maxValue": 8.0,
+    "retentionProbability": 0.385,
+    "labelSource": "ENGINEERED"
+  },
+  "8": {
+    "name": "Noor Ahmad",
+    "team": "CSK",
+    "minValue": 4.5,
+    "marketValue": 6.0,
+    "maxValue": 8.0,
+    "retentionProbability": 0.413,
+    "labelSource": "ENGINEERED"
+  },
+  "9": {
+    "name": "Nathan Ellis",
+    "team": "SRH",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.329,
+    "labelSource": "ENGINEERED"
+  },
+  "10": {
+    "name": "Shreyas Gopal",
+    "team": "CSK",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.345,
+    "labelSource": "ENGINEERED"
+  },
+  "11": {
+    "name": "Khaleel Ahmed",
+    "team": "SRH",
+    "minValue": 7.0,
+    "marketValue": 9.0,
+    "maxValue": 11.0,
+    "retentionProbability": 0.442,
+    "labelSource": "ENGINEERED"
+  },
+  "12": {
+    "name": "Ramakrishna Ghosh",
+    "team": "CSK",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.125,
+    "labelSource": "ENGINEERED"
+  },
+  "13": {
+    "name": "Mukesh Choudhary",
+    "team": "CSK",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.263,
+    "labelSource": "ENGINEERED"
+  },
+  "14": {
+    "name": "Jamie Overton",
+    "team": "CSK",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.275,
+    "labelSource": "ENGINEERED"
+  },
+  "15": {
+    "name": "Gurjapneet Singh",
+    "team": "CSK",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.154,
+    "labelSource": "ENGINEERED"
+  },
+  "16": {
+    "name": "Anshul Kamboj",
+    "team": "CSK",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.288,
+    "labelSource": "ENGINEERED"
+  },
+  "17": {
+    "name": "Prashant Veer",
+    "team": "CSK",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 7.0,
+    "retentionProbability": 0.33,
+    "labelSource": "ENGINEERED"
+  },
+  "18": {
+    "name": "Kartik Sharma",
+    "team": "CSK",
+    "minValue": 3.5,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.297,
+    "labelSource": "ENGINEERED"
+  },
+  "19": {
+    "name": "Rahul Chahar",
+    "team": "CSK",
+    "minValue": 4.0,
+    "marketValue": 6.0,
+    "maxValue": 7.5,
+    "retentionProbability": 0.386,
+    "labelSource": "ENGINEERED"
+  },
+  "20": {
+    "name": "Akeal Hosein",
+    "team": "CSK",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.328,
+    "labelSource": "ENGINEERED"
+  },
+  "21": {
+    "name": "Matt Henry",
+    "team": "CSK",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.305,
+    "labelSource": "ENGINEERED"
+  },
+  "22": {
+    "name": "Matthew Short",
+    "team": "CSK",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 3.5,
+    "retentionProbability": 0.213,
+    "labelSource": "ENGINEERED"
+  },
+  "23": {
+    "name": "Sarfaraz Khan",
+    "team": "CSK",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.259,
+    "labelSource": "ENGINEERED"
+  },
+  "24": {
+    "name": "Zak Foulkes",
+    "team": "CSK",
+    "minValue": 4.5,
+    "marketValue": 6.0,
+    "maxValue": 8.0,
+    "retentionProbability": 0.436,
+    "labelSource": "ENGINEERED"
+  },
+  "25": {
+    "name": "Aman Khan",
+    "team": "CSK",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 4.5,
+    "retentionProbability": 0.219,
+    "labelSource": "ENGINEERED"
+  },
+  "26": {
+    "name": "KL Rahul",
+    "team": "DC",
+    "minValue": 10.5,
+    "marketValue": 13.0,
+    "maxValue": 15.5,
+    "retentionProbability": 0.637,
+    "labelSource": "ENGINEERED"
+  },
+  "27": {
+    "name": "Axar Patel",
+    "team": "DC",
+    "minValue": 7.5,
+    "marketValue": 9.5,
+    "maxValue": 11.5,
+    "retentionProbability": 0.426,
+    "labelSource": "ENGINEERED"
+  },
+  "28": {
+    "name": "Kuldeep Yadav",
+    "team": "DC",
+    "minValue": 11.0,
+    "marketValue": 12.5,
+    "maxValue": 15.0,
+    "retentionProbability": 0.734,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "29": {
+    "name": "T. Natarajan",
+    "team": "SRH",
+    "minValue": 3.5,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.35,
+    "labelSource": "ENGINEERED"
+  },
+  "30": {
+    "name": "Mitchell Starc",
+    "team": "DC",
+    "minValue": 4.0,
+    "marketValue": 6.0,
+    "maxValue": 7.5,
+    "retentionProbability": 0.413,
+    "labelSource": "ENGINEERED"
+  },
+  "31": {
+    "name": "Tristan Stubbs",
+    "team": "DC",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.362,
+    "labelSource": "ENGINEERED"
+  },
+  "32": {
+    "name": "Mukesh Kumar",
+    "team": "DC",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.256,
+    "labelSource": "ENGINEERED"
+  },
+  "33": {
+    "name": "Nitish Rana",
+    "team": "DC",
+    "minValue": 4.5,
+    "marketValue": 6.5,
+    "maxValue": 8.0,
+    "retentionProbability": 0.365,
+    "labelSource": "ENGINEERED"
+  },
+  "34": {
+    "name": "Abishek Porel",
+    "team": "DC",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.283,
+    "labelSource": "ENGINEERED"
+  },
+  "35": {
+    "name": "Ashutosh Sharma",
+    "team": "DC",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.317,
+    "labelSource": "ENGINEERED"
+  },
+  "36": {
+    "name": "Sameer Rizvi",
+    "team": "DC",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.306,
+    "labelSource": "ENGINEERED"
+  },
+  "37": {
+    "name": "Karun Nair",
+    "team": "DC",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 7.0,
+    "retentionProbability": 0.296,
+    "labelSource": "ENGINEERED"
+  },
+  "38": {
+    "name": "Dushmantha Chameera",
+    "team": "DC",
+    "minValue": 0.5,
+    "marketValue": 2.0,
+    "maxValue": 3.0,
+    "retentionProbability": 0.174,
+    "labelSource": "ENGINEERED"
+  },
+  "39": {
+    "name": "Vipraj Nigam",
+    "team": "DC",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.5,
+    "retentionProbability": 0.263,
+    "labelSource": "ENGINEERED"
+  },
+  "40": {
+    "name": "Ajay Mandal",
+    "team": "DC",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 6.0,
+    "retentionProbability": 0.234,
+    "labelSource": "ENGINEERED"
+  },
+  "41": {
+    "name": "Madhav Tiwari",
+    "team": "DC",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.293,
+    "labelSource": "ENGINEERED"
+  },
+  "42": {
+    "name": "Tripurana Vijay",
+    "team": "DC",
+    "minValue": 0.5,
+    "marketValue": 2.0,
+    "maxValue": 3.0,
+    "retentionProbability": 0.063,
+    "labelSource": "ENGINEERED"
+  },
+  "43": {
+    "name": "Auqib Nabi Dar",
+    "team": "DC",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.276,
+    "labelSource": "ENGINEERED"
+  },
+  "44": {
+    "name": "Pathum Nissanka",
+    "team": "DC",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.264,
+    "labelSource": "ENGINEERED"
+  },
+  "45": {
+    "name": "David Miller",
+    "team": "DC",
+    "minValue": 5.0,
+    "marketValue": 6.5,
+    "maxValue": 8.5,
+    "retentionProbability": 0.418,
+    "labelSource": "ENGINEERED"
+  },
+  "46": {
+    "name": "Ben Duckett",
+    "team": "DC",
+    "minValue": 5.5,
+    "marketValue": 7.5,
+    "maxValue": 9.5,
+    "retentionProbability": 0.493,
+    "labelSource": "ENGINEERED"
+  },
+  "47": {
+    "name": "Lungi Ngidi",
+    "team": "DC",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.352,
+    "labelSource": "ENGINEERED"
+  },
+  "48": {
+    "name": "Kyle Jamieson",
+    "team": "DC",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.223,
+    "labelSource": "ENGINEERED"
+  },
+  "49": {
+    "name": "Prithvi Shaw",
+    "team": "DC",
+    "minValue": 4.0,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.321,
+    "labelSource": "ENGINEERED"
+  },
+  "50": {
+    "name": "Sahil Parakh",
+    "team": "DC",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.188,
+    "labelSource": "ENGINEERED"
+  },
+  "51": {
+    "name": "Shubman Gill",
+    "team": "GT",
+    "minValue": 17.0,
+    "marketValue": 18.0,
+    "maxValue": 19.5,
+    "retentionProbability": 0.954,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "52": {
+    "name": "Rashid Khan",
+    "team": "GT",
+    "minValue": 13.0,
+    "marketValue": 13.5,
+    "maxValue": 16.0,
+    "retentionProbability": 0.915,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "53": {
+    "name": "Jos Buttler",
+    "team": "GT",
+    "minValue": 7.0,
+    "marketValue": 9.5,
+    "maxValue": 11.5,
+    "retentionProbability": 0.596,
+    "labelSource": "ENGINEERED"
+  },
+  "54": {
+    "name": "Kagiso Rabada",
+    "team": "GT",
+    "minValue": 7.5,
+    "marketValue": 9.5,
+    "maxValue": 11.5,
+    "retentionProbability": 0.614,
+    "labelSource": "ENGINEERED"
+  },
+  "55": {
+    "name": "Mohammed Siraj",
+    "team": "GT",
+    "minValue": 10.0,
+    "marketValue": 12.5,
+    "maxValue": 15.5,
+    "retentionProbability": 0.731,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "56": {
+    "name": "Sai Sudharsan",
+    "team": "GT",
+    "minValue": 18.0,
+    "marketValue": 18.0,
+    "maxValue": 19.5,
+    "retentionProbability": 0.837,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "57": {
+    "name": "Prasidh Krishna",
+    "team": "GT",
+    "minValue": 4.5,
+    "marketValue": 6.5,
+    "maxValue": 8.0,
+    "retentionProbability": 0.381,
+    "labelSource": "ENGINEERED"
+  },
+  "58": {
+    "name": "Washington Sundar",
+    "team": "GT",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.262,
+    "labelSource": "ENGINEERED"
+  },
+  "59": {
+    "name": "Rahul Tewatia",
+    "team": "GT",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 7.0,
+    "retentionProbability": 0.304,
+    "labelSource": "ENGINEERED"
+  },
+  "60": {
+    "name": "Shahrukh Khan",
+    "team": "GT",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.248,
+    "labelSource": "ENGINEERED"
+  },
+  "61": {
+    "name": "R. Sai Kishore",
+    "team": "GT",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.345,
+    "labelSource": "ENGINEERED"
+  },
+  "62": {
+    "name": "Glenn Phillips",
+    "team": "GT",
+    "minValue": 1.0,
+    "marketValue": 2.0,
+    "maxValue": 3.5,
+    "retentionProbability": 0.176,
+    "labelSource": "ENGINEERED"
+  },
+  "63": {
+    "name": "Jayant Yadav",
+    "team": "GT",
+    "minValue": 2.0,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.188,
+    "labelSource": "ENGINEERED"
+  },
+  "64": {
+    "name": "Anuj Rawat",
+    "team": "GT",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.253,
+    "labelSource": "ENGINEERED"
+  },
+  "65": {
+    "name": "Kumar Kushagra",
+    "team": "GT",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.137,
+    "labelSource": "ENGINEERED"
+  },
+  "66": {
+    "name": "Gurnoor Singh Brar",
+    "team": "GT",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.235,
+    "labelSource": "ENGINEERED"
+  },
+  "67": {
+    "name": "Nishant Sindhu",
+    "team": "GT",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.189,
+    "labelSource": "ENGINEERED"
+  },
+  "68": {
+    "name": "Manav Suthar",
+    "team": "GT",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.153,
+    "labelSource": "ENGINEERED"
+  },
+  "69": {
+    "name": "Ishant Sharma",
+    "team": "GT",
+    "minValue": 4.5,
+    "marketValue": 6.5,
+    "maxValue": 8.0,
+    "retentionProbability": 0.389,
+    "labelSource": "ENGINEERED"
+  },
+  "70": {
+    "name": "Arshad Khan",
+    "team": "GT",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.225,
+    "labelSource": "ENGINEERED"
+  },
+  "71": {
+    "name": "Jason Holder",
+    "team": "GT",
+    "minValue": 2.0,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.279,
+    "labelSource": "ENGINEERED"
+  },
+  "72": {
+    "name": "Tom Banton",
+    "team": "GT",
+    "minValue": 0.5,
+    "marketValue": 2.0,
+    "maxValue": 3.0,
+    "retentionProbability": 0.144,
+    "labelSource": "ENGINEERED"
+  },
+  "73": {
+    "name": "Ashok Sharma",
+    "team": "GT",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.225,
+    "labelSource": "ENGINEERED"
+  },
+  "74": {
+    "name": "Luke Wood",
+    "team": "GT",
+    "minValue": 0.5,
+    "marketValue": 1.0,
+    "maxValue": 2.5,
+    "retentionProbability": 0.059,
+    "labelSource": "ENGINEERED"
+  },
+  "75": {
+    "name": "Prithvi Raj",
+    "team": "GT",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.325,
+    "labelSource": "ENGINEERED"
+  },
+  "76": {
+    "name": "Sunil Narine",
+    "team": "KKR",
+    "minValue": 8.5,
+    "marketValue": 11.0,
+    "maxValue": 14.0,
+    "retentionProbability": 0.633,
+    "labelSource": "ENGINEERED"
+  },
+  "77": {
+    "name": "Varun Chakravarthy",
+    "team": "KKR",
+    "minValue": 9.0,
+    "marketValue": 11.5,
+    "maxValue": 14.0,
+    "retentionProbability": 0.644,
+    "labelSource": "ENGINEERED"
+  },
+  "78": {
+    "name": "Rinku Singh",
+    "team": "KKR",
+    "minValue": 4.0,
+    "marketValue": 6.0,
+    "maxValue": 7.5,
+    "retentionProbability": 0.344,
+    "labelSource": "ENGINEERED"
+  },
+  "79": {
+    "name": "Harshit Rana",
+    "team": "KKR",
+    "minValue": 4.0,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.336,
+    "labelSource": "ENGINEERED"
+  },
+  "80": {
+    "name": "Angkrish Raghuvanshi",
+    "team": "KKR",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 7.0,
+    "retentionProbability": 0.332,
+    "labelSource": "ENGINEERED"
+  },
+  "81": {
+    "name": "Ramandeep Singh",
+    "team": "KKR",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 6.0,
+    "retentionProbability": 0.23,
+    "labelSource": "ENGINEERED"
+  },
+  "82": {
+    "name": "Ajinkya Rahane",
+    "team": "KKR",
+    "minValue": 8.5,
+    "marketValue": 10.5,
+    "maxValue": 13.0,
+    "retentionProbability": 0.507,
+    "labelSource": "ENGINEERED"
+  },
+  "83": {
+    "name": "Rovman Powell",
+    "team": "KKR",
+    "minValue": 1.5,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.24,
+    "labelSource": "ENGINEERED"
+  },
+  "84": {
+    "name": "Vaibhav Arora",
+    "team": "KKR",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.328,
+    "labelSource": "ENGINEERED"
+  },
+  "85": {
+    "name": "Manish Pandey",
+    "team": "KKR",
+    "minValue": 4.5,
+    "marketValue": 6.5,
+    "maxValue": 8.5,
+    "retentionProbability": 0.397,
+    "labelSource": "ENGINEERED"
+  },
+  "86": {
+    "name": "Anukul Roy",
+    "team": "KKR",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.278,
+    "labelSource": "ENGINEERED"
+  },
+  "87": {
+    "name": "Umran Malik",
+    "team": "KKR",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.237,
+    "labelSource": "ENGINEERED"
+  },
+  "88": {
+    "name": "Cameron Green",
+    "team": "KKR",
+    "minValue": 2.0,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.277,
+    "labelSource": "ENGINEERED"
+  },
+  "89": {
+    "name": "Matheesha Pathirana",
+    "team": "KKR",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.352,
+    "labelSource": "ENGINEERED"
+  },
+  "90": {
+    "name": "Mustafizur Rahman",
+    "team": "KKR",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.353,
+    "labelSource": "ENGINEERED"
+  },
+  "91": {
+    "name": "Tejasvi Singh",
+    "team": "KKR",
+    "minValue": 4.5,
+    "marketValue": 6.0,
+    "maxValue": 8.0,
+    "retentionProbability": 0.396,
+    "labelSource": "ENGINEERED"
+  },
+  "92": {
+    "name": "Finn Allen",
+    "team": "KKR",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.317,
+    "labelSource": "ENGINEERED"
+  },
+  "93": {
+    "name": "Rachin Ravindra",
+    "team": "KKR",
+    "minValue": 1.5,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.241,
+    "labelSource": "ENGINEERED"
+  },
+  "94": {
+    "name": "Tim Seifert",
+    "team": "KKR",
+    "minValue": 0.5,
+    "marketValue": 2.0,
+    "maxValue": 3.0,
+    "retentionProbability": 0.145,
+    "labelSource": "ENGINEERED"
+  },
+  "95": {
+    "name": "Akash Deep",
+    "team": "KKR",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.154,
+    "labelSource": "ENGINEERED"
+  },
+  "96": {
+    "name": "Rahul Tripathi",
+    "team": "KKR",
+    "minValue": 4.0,
+    "marketValue": 5.5,
+    "maxValue": 7.5,
+    "retentionProbability": 0.335,
+    "labelSource": "ENGINEERED"
+  },
+  "97": {
+    "name": "Prashant Solanki",
+    "team": "KKR",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.345,
+    "labelSource": "ENGINEERED"
+  },
+  "98": {
+    "name": "Kartik Tyagi",
+    "team": "KKR",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.303,
+    "labelSource": "ENGINEERED"
+  },
+  "99": {
+    "name": "Sarthak Ranjan",
+    "team": "KKR",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.167,
+    "labelSource": "ENGINEERED"
+  },
+  "100": {
+    "name": "Daksh Kamra",
+    "team": "KKR",
+    "minValue": 0.5,
+    "marketValue": 2.0,
+    "maxValue": 3.5,
+    "retentionProbability": 0.067,
+    "labelSource": "ENGINEERED"
+  },
+  "101": {
+    "name": "Rishabh Pant",
+    "team": "LSG",
+    "minValue": 16.0,
+    "marketValue": 16.5,
+    "maxValue": 19.0,
+    "retentionProbability": 0.919,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "102": {
+    "name": "Nicholas Pooran",
+    "team": "LSG",
+    "minValue": 11.0,
+    "marketValue": 12.0,
+    "maxValue": 15.0,
+    "retentionProbability": 0.692,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "103": {
+    "name": "Mayank Yadav",
+    "team": "LSG",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.217,
+    "labelSource": "ENGINEERED"
+  },
+  "104": {
+    "name": "Mohammed Shami",
+    "team": "LSG",
+    "minValue": 9.0,
+    "marketValue": 11.5,
+    "maxValue": 14.0,
+    "retentionProbability": 0.597,
+    "labelSource": "ENGINEERED"
+  },
+  "105": {
+    "name": "Mohsin Khan",
+    "team": "LSG",
+    "minValue": 3.5,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.352,
+    "labelSource": "ENGINEERED"
+  },
+  "106": {
+    "name": "Ayush Badoni",
+    "team": "LSG",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.297,
+    "labelSource": "ENGINEERED"
+  },
+  "107": {
+    "name": "Avesh Khan",
+    "team": "LSG",
+    "minValue": 4.0,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.336,
+    "labelSource": "ENGINEERED"
+  },
+  "108": {
+    "name": "Abdul Samad",
+    "team": "LSG",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.248,
+    "labelSource": "ENGINEERED"
+  },
+  "109": {
+    "name": "Mitchell Marsh",
+    "team": "LSG",
+    "minValue": 3.5,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.388,
+    "labelSource": "ENGINEERED"
+  },
+  "110": {
+    "name": "Aiden Markram",
+    "team": "LSG",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.256,
+    "labelSource": "ENGINEERED"
+  },
+  "111": {
+    "name": "Shahbaz Ahmed",
+    "team": "LSG",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.226,
+    "labelSource": "ENGINEERED"
+  },
+  "112": {
+    "name": "Matthew Breetzke",
+    "team": "LSG",
+    "minValue": 0.5,
+    "marketValue": 2.0,
+    "maxValue": 3.5,
+    "retentionProbability": 0.175,
+    "labelSource": "ENGINEERED"
+  },
+  "113": {
+    "name": "Digvesh Rathi",
+    "team": "LSG",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.323,
+    "labelSource": "ENGINEERED"
+  },
+  "114": {
+    "name": "Himmat Singh",
+    "team": "LSG",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.248,
+    "labelSource": "ENGINEERED"
+  },
+  "115": {
+    "name": "Arshin Kulkarni",
+    "team": "LSG",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.133,
+    "labelSource": "ENGINEERED"
+  },
+  "116": {
+    "name": "Manimaran Siddharth",
+    "team": "LSG",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.5,
+    "retentionProbability": 0.264,
+    "labelSource": "ENGINEERED"
+  },
+  "117": {
+    "name": "Akash Singh",
+    "team": "LSG",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.258,
+    "labelSource": "ENGINEERED"
+  },
+  "118": {
+    "name": "Arjun Tendulkar",
+    "team": "LSG",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.224,
+    "labelSource": "ENGINEERED"
+  },
+  "119": {
+    "name": "Prince Yadav",
+    "team": "LSG",
+    "minValue": 1.0,
+    "marketValue": 2.0,
+    "maxValue": 3.5,
+    "retentionProbability": 0.088,
+    "labelSource": "ENGINEERED"
+  },
+  "120": {
+    "name": "Josh Inglis",
+    "team": "LSG",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.5,
+    "retentionProbability": 0.317,
+    "labelSource": "ENGINEERED"
+  },
+  "121": {
+    "name": "Akshat Raghuwanshi",
+    "team": "LSG",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.167,
+    "labelSource": "ENGINEERED"
+  },
+  "122": {
+    "name": "Mukul Choudhary",
+    "team": "LSG",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.306,
+    "labelSource": "ENGINEERED"
+  },
+  "123": {
+    "name": "Wanindu Hasaranga",
+    "team": "LSG",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.0,
+    "retentionProbability": 0.243,
+    "labelSource": "ENGINEERED"
+  },
+  "124": {
+    "name": "Anrich Nortje",
+    "team": "LSG",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.338,
+    "labelSource": "ENGINEERED"
+  },
+  "125": {
+    "name": "Naman Tiwari",
+    "team": "LSG",
+    "minValue": 4.0,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.36,
+    "labelSource": "ENGINEERED"
+  },
+  "126": {
+    "name": "Rohit Sharma",
+    "team": "MI",
+    "minValue": 18.0,
+    "marketValue": 19.5,
+    "maxValue": 20.5,
+    "retentionProbability": 0.908,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "127": {
+    "name": "Jasprit Bumrah",
+    "team": "MI",
+    "minValue": 18.0,
+    "marketValue": 18.5,
+    "maxValue": 20.5,
+    "retentionProbability": 0.921,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "128": {
+    "name": "Suryakumar Yadav",
+    "team": "MI",
+    "minValue": 16.0,
+    "marketValue": 18.0,
+    "maxValue": 20.0,
+    "retentionProbability": 0.928,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "129": {
+    "name": "Hardik Pandya",
+    "team": "PBKS",
+    "minValue": 15.0,
+    "marketValue": 17.0,
+    "maxValue": 19.0,
+    "retentionProbability": 0.919,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "130": {
+    "name": "Tilak Varma",
+    "team": "MI",
+    "minValue": 7.5,
+    "marketValue": 10.0,
+    "maxValue": 12.0,
+    "retentionProbability": 0.464,
+    "labelSource": "ENGINEERED"
+  },
+  "131": {
+    "name": "Trent Boult",
+    "team": "MI",
+    "minValue": 10.5,
+    "marketValue": 12.0,
+    "maxValue": 12.0,
+    "retentionProbability": 0.806,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "132": {
+    "name": "Deepak Chahar",
+    "team": "MI",
+    "minValue": 7.0,
+    "marketValue": 9.0,
+    "maxValue": 11.0,
+    "retentionProbability": 0.442,
+    "labelSource": "ENGINEERED"
+  },
+  "133": {
+    "name": "Naman Dhir",
+    "team": "MI",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.305,
+    "labelSource": "ENGINEERED"
+  },
+  "134": {
+    "name": "Will Jacks",
+    "team": "MI",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.341,
+    "labelSource": "ENGINEERED"
+  },
+  "135": {
+    "name": "Robin Minz",
+    "team": "MI",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.127,
+    "labelSource": "ENGINEERED"
+  },
+  "136": {
+    "name": "Ryan Rickelton",
+    "team": "MI",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.308,
+    "labelSource": "ENGINEERED"
+  },
+  "137": {
+    "name": "Shardul Thakur",
+    "team": "MI",
+    "minValue": 7.0,
+    "marketValue": 9.0,
+    "maxValue": 11.0,
+    "retentionProbability": 0.354,
+    "labelSource": "ENGINEERED"
+  },
+  "138": {
+    "name": "Sherfane Rutherford",
+    "team": "MI",
+    "minValue": 1.5,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.241,
+    "labelSource": "ENGINEERED"
+  },
+  "139": {
+    "name": "Mayank Markande",
+    "team": "MI",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.314,
+    "labelSource": "ENGINEERED"
+  },
+  "140": {
+    "name": "Allah Ghazanfar",
+    "team": "MI",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.0,
+    "retentionProbability": 0.271,
+    "labelSource": "ENGINEERED"
+  },
+  "141": {
+    "name": "Corbin Bosch",
+    "team": "MI",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.288,
+    "labelSource": "ENGINEERED"
+  },
+  "142": {
+    "name": "Mitchell Santner",
+    "team": "MI",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.251,
+    "labelSource": "ENGINEERED"
+  },
+  "143": {
+    "name": "Ashwani Kumar",
+    "team": "MI",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.323,
+    "labelSource": "ENGINEERED"
+  },
+  "144": {
+    "name": "Raj Angad Bawa",
+    "team": "MI",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.205,
+    "labelSource": "ENGINEERED"
+  },
+  "145": {
+    "name": "Raghu Sharma",
+    "team": "MI",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.163,
+    "labelSource": "ENGINEERED"
+  },
+  "146": {
+    "name": "Quinton de Kock",
+    "team": "MI",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.5,
+    "retentionProbability": 0.376,
+    "labelSource": "ENGINEERED"
+  },
+  "147": {
+    "name": "Atharva Ankolekar",
+    "team": "MI",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.247,
+    "labelSource": "ENGINEERED"
+  },
+  "148": {
+    "name": "Mohammad Izhar",
+    "team": "MI",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 7.0,
+    "retentionProbability": 0.359,
+    "labelSource": "ENGINEERED"
+  },
+  "149": {
+    "name": "Danish Malewar",
+    "team": "MI",
+    "minValue": 1.0,
+    "marketValue": 2.0,
+    "maxValue": 3.5,
+    "retentionProbability": 0.088,
+    "labelSource": "ENGINEERED"
+  },
+  "150": {
+    "name": "Mayank Rawat",
+    "team": "MI",
+    "minValue": 1.5,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.133,
+    "labelSource": "ENGINEERED"
+  },
+  "151": {
+    "name": "Shreyas Iyer",
+    "team": "PBKS",
+    "minValue": 8.5,
+    "marketValue": 10.5,
+    "maxValue": 13.0,
+    "retentionProbability": 0.495,
+    "labelSource": "ENGINEERED"
+  },
+  "152": {
+    "name": "Arshdeep Singh",
+    "team": "MI",
+    "minValue": 7.5,
+    "marketValue": 9.5,
+    "maxValue": 12.0,
+    "retentionProbability": 0.48,
+    "labelSource": "ENGINEERED"
+  },
+  "153": {
+    "name": "Yuzvendra Chahal",
+    "team": "PBKS",
+    "minValue": 11.5,
+    "marketValue": 14.0,
+    "maxValue": 16.5,
+    "retentionProbability": 0.652,
+    "labelSource": "ENGINEERED"
+  },
+  "154": {
+    "name": "Marco Jansen",
+    "team": "PBKS",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.305,
+    "labelSource": "ENGINEERED"
+  },
+  "155": {
+    "name": "Prabhsimran Singh",
+    "team": "PBKS",
+    "minValue": 4.5,
+    "marketValue": 6.5,
+    "maxValue": 8.0,
+    "retentionProbability": 0.388,
+    "labelSource": "ENGINEERED"
+  },
+  "156": {
+    "name": "Harpreet Brar",
+    "team": "PBKS",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.5,
+    "retentionProbability": 0.266,
+    "labelSource": "ENGINEERED"
+  },
+  "157": {
+    "name": "Shashank Singh",
+    "team": "PBKS",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 7.0,
+    "retentionProbability": 0.332,
+    "labelSource": "ENGINEERED"
+  },
+  "158": {
+    "name": "Azmatullah Omarzai",
+    "team": "PBKS",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.23,
+    "labelSource": "ENGINEERED"
+  },
+  "159": {
+    "name": "Nehal Wadhera",
+    "team": "PBKS",
+    "minValue": 2.5,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.268,
+    "labelSource": "ENGINEERED"
+  },
+  "160": {
+    "name": "Xavier Bartlett",
+    "team": "PBKS",
+    "minValue": 0.5,
+    "marketValue": 1.5,
+    "maxValue": 2.5,
+    "retentionProbability": 0.114,
+    "labelSource": "ENGINEERED"
+  },
+  "161": {
+    "name": "Lockie Ferguson",
+    "team": "PBKS",
+    "minValue": 2.0,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.314,
+    "labelSource": "ENGINEERED"
+  },
+  "162": {
+    "name": "Marcus Stoinis",
+    "team": "PBKS",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.304,
+    "labelSource": "ENGINEERED"
+  },
+  "163": {
+    "name": "Mitch Owen",
+    "team": "PBKS",
+    "minValue": 0.5,
+    "marketValue": 1.0,
+    "maxValue": 2.5,
+    "retentionProbability": 0.061,
+    "labelSource": "ENGINEERED"
+  },
+  "164": {
+    "name": "Musheer Khan",
+    "team": "PBKS",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.188,
+    "labelSource": "ENGINEERED"
+  },
+  "165": {
+    "name": "Priyansh Arya",
+    "team": "PBKS",
+    "minValue": 7.5,
+    "marketValue": 9.5,
+    "maxValue": 11.5,
+    "retentionProbability": 0.443,
+    "labelSource": "ENGINEERED"
+  },
+  "166": {
+    "name": "Vyshak Vijaykumar",
+    "team": "PBKS",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.201,
+    "labelSource": "ENGINEERED"
+  },
+  "167": {
+    "name": "Yash Thakur",
+    "team": "PBKS",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.258,
+    "labelSource": "ENGINEERED"
+  },
+  "168": {
+    "name": "Pyla Avinash",
+    "team": "PBKS",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.214,
+    "labelSource": "ENGINEERED"
+  },
+  "169": {
+    "name": "Harnoor Pannu",
+    "team": "PBKS",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.221,
+    "labelSource": "ENGINEERED"
+  },
+  "170": {
+    "name": "Vishnu Vinod",
+    "team": "PBKS",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.205,
+    "labelSource": "ENGINEERED"
+  },
+  "171": {
+    "name": "Suryansh Shedge",
+    "team": "PBKS",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.257,
+    "labelSource": "ENGINEERED"
+  },
+  "172": {
+    "name": "Cooper Connolly",
+    "team": "PBKS",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.329,
+    "labelSource": "ENGINEERED"
+  },
+  "173": {
+    "name": "Ben Dwarshuis",
+    "team": "PBKS",
+    "minValue": 0.5,
+    "marketValue": 1.5,
+    "maxValue": 2.5,
+    "retentionProbability": 0.123,
+    "labelSource": "ENGINEERED"
+  },
+  "174": {
+    "name": "Praveen Dubey",
+    "team": "PBKS",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.162,
+    "labelSource": "ENGINEERED"
+  },
+  "175": {
+    "name": "Vishal Nishad",
+    "team": "PBKS",
+    "minValue": 0.5,
+    "marketValue": 2.0,
+    "maxValue": 3.0,
+    "retentionProbability": 0.074,
+    "labelSource": "ENGINEERED"
+  },
+  "176": {
+    "name": "Yashasvi Jaiswal",
+    "team": "RR",
+    "minValue": 16.0,
+    "marketValue": 18.0,
+    "maxValue": 19.5,
+    "retentionProbability": 0.886,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "177": {
+    "name": "Ravindra Jadeja",
+    "team": "RR",
+    "minValue": 14.0,
+    "marketValue": 16.5,
+    "maxValue": 18.0,
+    "retentionProbability": 0.941,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "178": {
+    "name": "Riyan Parag",
+    "team": "RR",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.5,
+    "retentionProbability": 0.238,
+    "labelSource": "ENGINEERED"
+  },
+  "179": {
+    "name": "Jofra Archer",
+    "team": "RR",
+    "minValue": 8.0,
+    "marketValue": 10.0,
+    "maxValue": 12.0,
+    "retentionProbability": 0.644,
+    "labelSource": "ENGINEERED"
+  },
+  "180": {
+    "name": "Dhruv Jurel",
+    "team": "RR",
+    "minValue": 5.0,
+    "marketValue": 7.0,
+    "maxValue": 9.0,
+    "retentionProbability": 0.39,
+    "labelSource": "ENGINEERED"
+  },
+  "181": {
+    "name": "Shimron Hetmyer",
+    "team": "RR",
+    "minValue": 0.5,
+    "marketValue": 2.0,
+    "maxValue": 3.5,
+    "retentionProbability": 0.163,
+    "labelSource": "ENGINEERED"
+  },
+  "182": {
+    "name": "Sam Curran",
+    "team": "RR",
+    "minValue": 2.0,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.282,
+    "labelSource": "ENGINEERED"
+  },
+  "183": {
+    "name": "Sandeep Sharma",
+    "team": "RR",
+    "minValue": 4.0,
+    "marketValue": 5.5,
+    "maxValue": 7.5,
+    "retentionProbability": 0.376,
+    "labelSource": "ENGINEERED"
+  },
+  "184": {
+    "name": "Vaibhav Suryavanshi",
+    "team": "RR",
+    "minValue": 9.0,
+    "marketValue": 11.0,
+    "maxValue": 13.5,
+    "retentionProbability": 0.554,
+    "labelSource": "ENGINEERED"
+  },
+  "185": {
+    "name": "Tushar Deshpande",
+    "team": "RR",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.312,
+    "labelSource": "ENGINEERED"
+  },
+  "186": {
+    "name": "Shubham Dubey",
+    "team": "RR",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.317,
+    "labelSource": "ENGINEERED"
+  },
+  "187": {
+    "name": "Yudhvir Charak",
+    "team": "RR",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.249,
+    "labelSource": "ENGINEERED"
+  },
+  "188": {
+    "name": "Kwena Maphaka",
+    "team": "RR",
+    "minValue": 0.5,
+    "marketValue": 1.0,
+    "maxValue": 2.5,
+    "retentionProbability": 0.081,
+    "labelSource": "ENGINEERED"
+  },
+  "189": {
+    "name": "Lhuan-Dre Pretorius",
+    "team": "RR",
+    "minValue": 0.5,
+    "marketValue": 1.5,
+    "maxValue": 3.0,
+    "retentionProbability": 0.139,
+    "labelSource": "ENGINEERED"
+  },
+  "190": {
+    "name": "Nandre Burger",
+    "team": "RR",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.0,
+    "retentionProbability": 0.271,
+    "labelSource": "ENGINEERED"
+  },
+  "191": {
+    "name": "Donovan Ferreira",
+    "team": "RR",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.266,
+    "labelSource": "ENGINEERED"
+  },
+  "192": {
+    "name": "Ravi Bishnoi",
+    "team": "RR",
+    "minValue": 3.5,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.337,
+    "labelSource": "ENGINEERED"
+  },
+  "193": {
+    "name": "Adam Milne",
+    "team": "RR",
+    "minValue": 0.5,
+    "marketValue": 1.5,
+    "maxValue": 3.0,
+    "retentionProbability": 0.153,
+    "labelSource": "ENGINEERED"
+  },
+  "194": {
+    "name": "Ravi Singh",
+    "team": "RR",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.167,
+    "labelSource": "ENGINEERED"
+  },
+  "195": {
+    "name": "Sushant Mishra",
+    "team": "RR",
+    "minValue": 3.5,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.353,
+    "labelSource": "ENGINEERED"
+  },
+  "196": {
+    "name": "Kuldeep Sen",
+    "team": "RR",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.294,
+    "labelSource": "ENGINEERED"
+  },
+  "197": {
+    "name": "Brijesh Sharma",
+    "team": "RR",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.256,
+    "labelSource": "ENGINEERED"
+  },
+  "198": {
+    "name": "Aman Rao Perala",
+    "team": "RR",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.307,
+    "labelSource": "ENGINEERED"
+  },
+  "199": {
+    "name": "Vignesh Puthur",
+    "team": "RR",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.323,
+    "labelSource": "ENGINEERED"
+  },
+  "200": {
+    "name": "Virat Kohli",
+    "team": "RCB",
+    "minValue": 18.0,
+    "marketValue": 19.5,
+    "maxValue": 21.0,
+    "retentionProbability": 0.957,
+    "labelSource": "EXPERT_ANCHOR"
+  },
+  "201": {
+    "name": "Rajat Patidar",
+    "team": "RCB",
+    "minValue": 8.0,
+    "marketValue": 10.0,
+    "maxValue": 12.5,
+    "retentionProbability": 0.482,
+    "labelSource": "ENGINEERED"
+  },
+  "202": {
+    "name": "Phil Salt",
+    "team": "RCB",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.378,
+    "labelSource": "ENGINEERED"
+  },
+  "203": {
+    "name": "Josh Hazlewood",
+    "team": "RCB",
+    "minValue": 8.0,
+    "marketValue": 10.5,
+    "maxValue": 12.5,
+    "retentionProbability": 0.645,
+    "labelSource": "ENGINEERED"
+  },
+  "204": {
+    "name": "Yash Dayal",
+    "team": "RCB",
+    "minValue": 2.5,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.269,
+    "labelSource": "ENGINEERED"
+  },
+  "205": {
+    "name": "Krunal Pandya",
+    "team": "RCB",
+    "minValue": 7.5,
+    "marketValue": 9.5,
+    "maxValue": 12.0,
+    "retentionProbability": 0.425,
+    "labelSource": "ENGINEERED"
+  },
+  "206": {
+    "name": "Bhuvneshwar Kumar",
+    "team": "RCB",
+    "minValue": 13.0,
+    "marketValue": 15.5,
+    "maxValue": 18.0,
+    "retentionProbability": 0.688,
+    "labelSource": "ENGINEERED"
+  },
+  "207": {
+    "name": "Tim David",
+    "team": "RCB",
+    "minValue": 5.0,
+    "marketValue": 6.5,
+    "maxValue": 8.5,
+    "retentionProbability": 0.418,
+    "labelSource": "ENGINEERED"
+  },
+  "208": {
+    "name": "Romario Shepherd",
+    "team": "RCB",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.221,
+    "labelSource": "ENGINEERED"
+  },
+  "209": {
+    "name": "Nuwan Thushara",
+    "team": "RCB",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.252,
+    "labelSource": "ENGINEERED"
+  },
+  "210": {
+    "name": "Swapnil Singh",
+    "team": "RCB",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.246,
+    "labelSource": "ENGINEERED"
+  },
+  "211": {
+    "name": "Jacob Bethell",
+    "team": "RCB",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.342,
+    "labelSource": "ENGINEERED"
+  },
+  "212": {
+    "name": "Devdutt Padikkal",
+    "team": "RCB",
+    "minValue": 4.5,
+    "marketValue": 6.5,
+    "maxValue": 8.5,
+    "retentionProbability": 0.384,
+    "labelSource": "ENGINEERED"
+  },
+  "213": {
+    "name": "Suyash Sharma",
+    "team": "RCB",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 4.5,
+    "retentionProbability": 0.217,
+    "labelSource": "ENGINEERED"
+  },
+  "214": {
+    "name": "Rasikh Dar",
+    "team": "RCB",
+    "minValue": 2.5,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.301,
+    "labelSource": "ENGINEERED"
+  },
+  "215": {
+    "name": "Jitesh Sharma",
+    "team": "RCB",
+    "minValue": 5.0,
+    "marketValue": 6.5,
+    "maxValue": 8.5,
+    "retentionProbability": 0.362,
+    "labelSource": "ENGINEERED"
+  },
+  "216": {
+    "name": "Abhinandan Singh",
+    "team": "RCB",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.165,
+    "labelSource": "ENGINEERED"
+  },
+  "217": {
+    "name": "Venkatesh Iyer",
+    "team": "RCB",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.262,
+    "labelSource": "ENGINEERED"
+  },
+  "218": {
+    "name": "Jordan Cox",
+    "team": "RCB",
+    "minValue": 5.0,
+    "marketValue": 7.0,
+    "maxValue": 9.0,
+    "retentionProbability": 0.417,
+    "labelSource": "ENGINEERED"
+  },
+  "219": {
+    "name": "Mangesh Yadav",
+    "team": "RCB",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.237,
+    "labelSource": "ENGINEERED"
+  },
+  "220": {
+    "name": "Vicky Kanhaiya Ostwal",
+    "team": "RCB",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.334,
+    "labelSource": "ENGINEERED"
+  },
+  "221": {
+    "name": "Kanishk Chouhan",
+    "team": "RCB",
+    "minValue": 0.5,
+    "marketValue": 2.0,
+    "maxValue": 3.0,
+    "retentionProbability": 0.068,
+    "labelSource": "ENGINEERED"
+  },
+  "222": {
+    "name": "Vihaan Malhotra",
+    "team": "RCB",
+    "minValue": 0.5,
+    "marketValue": 2.0,
+    "maxValue": 3.5,
+    "retentionProbability": 0.068,
+    "labelSource": "ENGINEERED"
+  },
+  "223": {
+    "name": "Satvik Deswal",
+    "team": "RCB",
+    "minValue": 3.5,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.372,
+    "labelSource": "ENGINEERED"
+  },
+  "224": {
+    "name": "Yash Raj Punja",
+    "team": "RCB",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.263,
+    "labelSource": "ENGINEERED"
+  },
+  "225": {
+    "name": "Pat Cummins",
+    "team": "SRH",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.304,
+    "labelSource": "ENGINEERED"
+  },
+  "226": {
+    "name": "Heinrich Klaasen",
+    "team": "SRH",
+    "minValue": 5.0,
+    "marketValue": 7.0,
+    "maxValue": 8.5,
+    "retentionProbability": 0.417,
+    "labelSource": "ENGINEERED"
+  },
+  "227": {
+    "name": "Travis Head",
+    "team": "SRH",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.33,
+    "labelSource": "ENGINEERED"
+  },
+  "228": {
+    "name": "Abhishek Sharma",
+    "team": "SRH",
+    "minValue": 5.5,
+    "marketValue": 7.5,
+    "maxValue": 9.5,
+    "retentionProbability": 0.352,
+    "labelSource": "ENGINEERED"
+  },
+  "229": {
+    "name": "Nitish Kumar Reddy",
+    "team": "SRH",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.256,
+    "labelSource": "ENGINEERED"
+  },
+  "230": {
+    "name": "Ishan Kishan",
+    "team": "SRH",
+    "minValue": 5.5,
+    "marketValue": 7.0,
+    "maxValue": 9.0,
+    "retentionProbability": 0.396,
+    "labelSource": "ENGINEERED"
+  },
+  "231": {
+    "name": "Harshal Patel",
+    "team": "SRH",
+    "minValue": 10.0,
+    "marketValue": 12.5,
+    "maxValue": 15.0,
+    "retentionProbability": 0.616,
+    "labelSource": "ENGINEERED"
+  },
+  "232": {
+    "name": "Jaydev Unadkat",
+    "team": "SRH",
+    "minValue": 7.0,
+    "marketValue": 9.0,
+    "maxValue": 11.0,
+    "retentionProbability": 0.456,
+    "labelSource": "ENGINEERED"
+  },
+  "233": {
+    "name": "Zeeshan Ansari",
+    "team": "DC",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.162,
+    "labelSource": "ENGINEERED"
+  },
+  "234": {
+    "name": "Brydon Carse",
+    "team": "SRH",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.296,
+    "labelSource": "ENGINEERED"
+  },
+  "235": {
+    "name": "Kamindu Mendis",
+    "team": "SRH",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.22,
+    "labelSource": "ENGINEERED"
+  },
+  "236": {
+    "name": "Harsh Dubey",
+    "team": "SRH",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.289,
+    "labelSource": "ENGINEERED"
+  },
+  "237": {
+    "name": "Aniket Verma",
+    "team": "SRH",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.248,
+    "labelSource": "ENGINEERED"
+  },
+  "238": {
+    "name": "Eshan Malinga",
+    "team": "SRH",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 4.5,
+    "retentionProbability": 0.315,
+    "labelSource": "ENGINEERED"
+  },
+  "239": {
+    "name": "Smaran Ravichandaran",
+    "team": "SRH",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 7.0,
+    "retentionProbability": 0.33,
+    "labelSource": "ENGINEERED"
+  },
+  "240": {
+    "name": "Liam Livingstone",
+    "team": "CSK",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.259,
+    "labelSource": "ENGINEERED"
+  },
+  "241": {
+    "name": "Salil Arora",
+    "team": "SRH",
+    "minValue": 3.0,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.272,
+    "labelSource": "ENGINEERED"
+  },
+  "242": {
+    "name": "Jack Edwards",
+    "team": "CSK",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.29,
+    "labelSource": "ENGINEERED"
+  },
+  "243": {
+    "name": "Shivam Mavi",
+    "team": "SRH",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.227,
+    "labelSource": "ENGINEERED"
+  },
+  "244": {
+    "name": "Amit Kumar",
+    "team": "SRH",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 3.5,
+    "retentionProbability": 0.127,
+    "labelSource": "ENGINEERED"
+  },
+  "245": {
+    "name": "Onkar Tarmale",
+    "team": "SRH",
+    "minValue": 1.5,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.117,
+    "labelSource": "ENGINEERED"
+  },
+  "246": {
+    "name": "Sakib Hussain",
+    "team": "SRH",
+    "minValue": 2.5,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.302,
+    "labelSource": "ENGINEERED"
+  },
+  "247": {
+    "name": "Praful Hinge",
+    "team": "SRH",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.293,
+    "labelSource": "ENGINEERED"
+  },
+  "248": {
+    "name": "Shivang Kumar",
+    "team": "SRH",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.211,
+    "labelSource": "ENGINEERED"
+  },
+  "249": {
+    "name": "Krains Fuletra",
+    "team": "SRH",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 3.5,
+    "retentionProbability": 0.118,
+    "labelSource": "ENGINEERED"
+  },
+  "250": {
+    "name": "Jake Fraser-McGurk",
+    "team": "FREE_AGENT",
+    "minValue": 2.0,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.178,
+    "labelSource": "ENGINEERED"
+  },
+  "251": {
+    "name": "Devon Conway",
+    "team": "FREE_AGENT",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.233,
+    "labelSource": "ENGINEERED"
+  },
+  "252": {
+    "name": "Gus Atkinson",
+    "team": "FREE_AGENT",
+    "minValue": 4.0,
+    "marketValue": 6.0,
+    "maxValue": 7.5,
+    "retentionProbability": 0.302,
+    "labelSource": "ENGINEERED"
+  },
+  "253": {
+    "name": "Jamie Smith",
+    "team": "FREE_AGENT",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.179,
+    "labelSource": "ENGINEERED"
+  },
+  "254": {
+    "name": "Deepak Hooda",
+    "team": "FREE_AGENT",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.117,
+    "labelSource": "ENGINEERED"
+  },
+  "255": {
+    "name": "Wiaan Mulder",
+    "team": "FREE_AGENT",
+    "minValue": 0.5,
+    "marketValue": 1.0,
+    "maxValue": 2.5,
+    "retentionProbability": 0.032,
+    "labelSource": "ENGINEERED"
+  },
+  "256": {
+    "name": "Rahmanullah Gurbaz",
+    "team": "FREE_AGENT",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.0,
+    "retentionProbability": 0.14,
+    "labelSource": "ENGINEERED"
+  },
+  "257": {
+    "name": "Jonny Bairstow",
+    "team": "FREE_AGENT",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.23,
+    "labelSource": "ENGINEERED"
+  },
+  "258": {
+    "name": "K.S. Bharat",
+    "team": "FREE_AGENT",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.5,
+    "retentionProbability": 0.146,
+    "labelSource": "ENGINEERED"
+  },
+  "259": {
+    "name": "Gerald Coetzee",
+    "team": "FREE_AGENT",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.131,
+    "labelSource": "ENGINEERED"
+  },
+  "260": {
+    "name": "Spencer Johnson",
+    "team": "FREE_AGENT",
+    "minValue": 0.5,
+    "marketValue": 1.5,
+    "maxValue": 3.0,
+    "retentionProbability": 0.035,
+    "labelSource": "ENGINEERED"
+  },
+  "261": {
+    "name": "Fazalhaq Farooqi",
+    "team": "FREE_AGENT",
+    "minValue": 0.5,
+    "marketValue": 2.0,
+    "maxValue": 3.5,
+    "retentionProbability": 0.09,
+    "labelSource": "ENGINEERED"
+  },
+  "262": {
+    "name": "Maheesh Theekshana",
+    "team": "FREE_AGENT",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.177,
+    "labelSource": "ENGINEERED"
+  },
+  "263": {
+    "name": "Mujeeb Ur Rahman",
+    "team": "FREE_AGENT",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.13,
+    "labelSource": "ENGINEERED"
+  },
+  "264": {
+    "name": "Aarya Desai",
+    "team": "FREE_AGENT",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.034,
+    "labelSource": "ENGINEERED"
+  },
+  "265": {
+    "name": "Yash Dhull",
+    "team": "FREE_AGENT",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.033,
+    "labelSource": "ENGINEERED"
+  },
+  "266": {
+    "name": "Abhinav Manohar",
+    "team": "FREE_AGENT",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.09,
+    "labelSource": "ENGINEERED"
+  },
+  "267": {
+    "name": "Anmolpreet Singh",
+    "team": "FREE_AGENT",
+    "minValue": 2.0,
+    "marketValue": 3.5,
+    "maxValue": 5.0,
+    "retentionProbability": 0.102,
+    "labelSource": "ENGINEERED"
+  },
+  "268": {
+    "name": "Atharva Taide",
+    "team": "FREE_AGENT",
+    "minValue": 2.5,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.165,
+    "labelSource": "ENGINEERED"
+  },
+  "269": {
+    "name": "Mahipal Lomror",
+    "team": "FREE_AGENT",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.133,
+    "labelSource": "ENGINEERED"
+  },
+  "270": {
+    "name": "Vijay Shankar",
+    "team": "FREE_AGENT",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 7.0,
+    "retentionProbability": 0.17,
+    "labelSource": "ENGINEERED"
+  },
+  "271": {
+    "name": "Tanush Kotian",
+    "team": "FREE_AGENT",
+    "minValue": 2.0,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.081,
+    "labelSource": "ENGINEERED"
+  },
+  "272": {
+    "name": "Kamlesh Nagarkoti",
+    "team": "FREE_AGENT",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.0,
+    "retentionProbability": 0.039,
+    "labelSource": "ENGINEERED"
+  },
+  "273": {
+    "name": "Ruchit Ahir",
+    "team": "FREE_AGENT",
+    "minValue": 3.5,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.231,
+    "labelSource": "ENGINEERED"
+  },
+  "274": {
+    "name": "Sanvir Singh",
+    "team": "FREE_AGENT",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.076,
+    "labelSource": "ENGINEERED"
+  },
+  "275": {
+    "name": "Vansh Bedi",
+    "team": "FREE_AGENT",
+    "minValue": 1.0,
+    "marketValue": 2.0,
+    "maxValue": 3.5,
+    "retentionProbability": 0.034,
+    "labelSource": "ENGINEERED"
+  },
+  "276": {
+    "name": "Raj Limbani",
+    "team": "FREE_AGENT",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.235,
+    "labelSource": "ENGINEERED"
+  },
+  "277": {
+    "name": "Simarjeet Singh",
+    "team": "FREE_AGENT",
+    "minValue": 2.5,
+    "marketValue": 4.0,
+    "maxValue": 5.5,
+    "retentionProbability": 0.129,
+    "labelSource": "ENGINEERED"
+  },
+  "278": {
+    "name": "Akash Madhwal",
+    "team": "FREE_AGENT",
+    "minValue": 2.5,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.163,
+    "labelSource": "ENGINEERED"
+  },
+  "279": {
+    "name": "Karn Sharma",
+    "team": "FREE_AGENT",
+    "minValue": 6.5,
+    "marketValue": 9.0,
+    "maxValue": 11.0,
+    "retentionProbability": 0.321,
+    "labelSource": "ENGINEERED"
+  },
+  "280": {
+    "name": "Sean Abbott",
+    "team": "FREE_AGENT",
+    "minValue": 0.5,
+    "marketValue": 1.5,
+    "maxValue": 2.5,
+    "retentionProbability": 0.031,
+    "labelSource": "ENGINEERED"
+  },
+  "281": {
+    "name": "Michael Bracewell",
+    "team": "FREE_AGENT",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.174,
+    "labelSource": "ENGINEERED"
+  },
+  "282": {
+    "name": "Daryl Mitchell",
+    "team": "FREE_AGENT",
+    "minValue": 1.5,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.135,
+    "labelSource": "ENGINEERED"
+  },
+  "283": {
+    "name": "Dasun Shanaka",
+    "team": "FREE_AGENT",
+    "minValue": 1.0,
+    "marketValue": 2.0,
+    "maxValue": 3.5,
+    "retentionProbability": 0.086,
+    "labelSource": "ENGINEERED"
+  },
+  "284": {
+    "name": "Chetan Sakariya",
+    "team": "FREE_AGENT",
+    "minValue": 3.5,
+    "marketValue": 5.0,
+    "maxValue": 6.5,
+    "retentionProbability": 0.184,
+    "labelSource": "ENGINEERED"
+  },
+  "285": {
+    "name": "Waqar Salamkheil",
+    "team": "FREE_AGENT",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.185,
+    "labelSource": "ENGINEERED"
+  },
+  "286": {
+    "name": "Taskin Ahmed",
+    "team": "FREE_AGENT",
+    "minValue": 4.0,
+    "marketValue": 6.0,
+    "maxValue": 7.5,
+    "retentionProbability": 0.302,
+    "labelSource": "ENGINEERED"
+  },
+  "287": {
+    "name": "Alzarri Joseph",
+    "team": "FREE_AGENT",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.149,
+    "labelSource": "ENGINEERED"
+  },
+  "288": {
+    "name": "Riley Meredith",
+    "team": "FREE_AGENT",
+    "minValue": 1.5,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.155,
+    "labelSource": "ENGINEERED"
+  },
+  "289": {
+    "name": "Jhye Richardson",
+    "team": "FREE_AGENT",
+    "minValue": 0.5,
+    "marketValue": 1.5,
+    "maxValue": 3.0,
+    "retentionProbability": 0.039,
+    "labelSource": "ENGINEERED"
+  },
+  "290": {
+    "name": "Daniel Lawrence",
+    "team": "FREE_AGENT",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.281,
+    "labelSource": "ENGINEERED"
+  },
+  "291": {
+    "name": "Murugan Ashwin",
+    "team": "FREE_AGENT",
+    "minValue": 3.0,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.196,
+    "labelSource": "ENGINEERED"
+  },
+  "292": {
+    "name": "William Sutherland",
+    "team": "FREE_AGENT",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.157,
+    "labelSource": "ENGINEERED"
+  },
+  "293": {
+    "name": "Kartikeya Singh",
+    "team": "FREE_AGENT",
+    "minValue": 3.5,
+    "marketValue": 5.5,
+    "maxValue": 7.0,
+    "retentionProbability": 0.293,
+    "labelSource": "ENGINEERED"
+  },
+  "294": {
+    "name": "Shivam Shukla",
+    "team": "FREE_AGENT",
+    "minValue": 1.5,
+    "marketValue": 3.0,
+    "maxValue": 4.5,
+    "retentionProbability": 0.095,
+    "labelSource": "ENGINEERED"
+  },
+  "295": {
+    "name": "Wahidullah Zadran",
+    "team": "FREE_AGENT",
+    "minValue": 0.5,
+    "marketValue": 2.0,
+    "maxValue": 3.0,
+    "retentionProbability": 0.08,
+    "labelSource": "ENGINEERED"
+  },
+  "296": {
+    "name": "KC Cariappa",
+    "team": "FREE_AGENT",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.056,
+    "labelSource": "ENGINEERED"
+  },
+  "297": {
+    "name": "Sediqullah Atal",
+    "team": "FREE_AGENT",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 3.5,
+    "retentionProbability": 0.112,
+    "labelSource": "ENGINEERED"
+  },
+  "298": {
+    "name": "Nathan Smith",
+    "team": "FREE_AGENT",
+    "minValue": 0.5,
+    "marketValue": 1.0,
+    "maxValue": 2.5,
+    "retentionProbability": 0.032,
+    "labelSource": "ENGINEERED"
+  },
+  "299": {
+    "name": "Manan Vohra",
+    "team": "FREE_AGENT",
+    "minValue": 2.5,
+    "marketValue": 4.5,
+    "maxValue": 6.0,
+    "retentionProbability": 0.165,
+    "labelSource": "ENGINEERED"
+  },
+  "300": {
+    "name": "Jacob Duffy",
+    "team": "FREE_AGENT",
+    "minValue": 1.0,
+    "marketValue": 2.5,
+    "maxValue": 4.0,
+    "retentionProbability": 0.131,
+    "labelSource": "ENGINEERED"
+  }
+}

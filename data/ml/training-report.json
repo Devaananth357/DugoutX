@@ -1,0 +1,45 @@
+{
+  "rows": 300,
+  "features": [
+    "role",
+    "nationality",
+    "consistency_type",
+    "overseas",
+    "capped",
+    "batting_rating",
+    "bowling_rating",
+    "fielding_rating",
+    "form_rating",
+    "confidence",
+    "fitness",
+    "expected_strike_rate",
+    "wicket_taking_rating",
+    "death_rating",
+    "brand_value",
+    "leadership_value",
+    "role_scarcity",
+    "availability",
+    "age_market_factor",
+    "core_team_affinity"
+  ],
+  "testSize": 66,
+  "metrics": {
+    "price_low": {
+      "mae": 0.1953,
+      "r2": 0.975
+    },
+    "price_mid": {
+      "mae": 0.2043,
+      "r2": 0.9773
+    },
+    "price_high": {
+      "mae": 0.2268,
+      "r2": 0.9762
+    },
+    "retention": {
+      "mae": 0.0179,
+      "r2": 0.92
+    }
+  },
+  "randomSeed": 42
+}

@@ -1,0 +1,21 @@
+import { AI_PROFILES } from "./profiles";
+import { seededUnit } from "./math";
+import type { AiDifficulty, AiPlayer, RetentionDecision, RetentionPick } from "./types";
+import { getLearnedMarketValue } from "./market-model";
+
+export const MAX_AUCTION_PURSE=120;
+export const RETENTION_COSTS=[18,14,10,8,4] as const;
+function playerStrength(player:AiPlayer){const core=player.role==="BAT"||player.role==="WK"?player.batting:player.role==="AR"?(player.batting+player.bowling)/2:player.bowling;return core*.7+player.form*.12+player.confidence*.1+player.fitness*.08;}
+function marketValue(player:AiPlayer,difficulty:AiDifficulty,seed:string){const noise=(seededUnit(`${seed}:retain:${player.id}`)-.5)*2*AI_PROFILES[difficulty].valuationError;const learned=getLearnedMarketValue(player);if(learned)return Math.round(Math.max(learned.minValue,Math.min(learned.maxValue,learned.marketValue*(1+noise*.35)))*100)/100;const band=Math.max(0,Math.min(1,(playerStrength(player)-50)/50));const continuity=player.consistencyType==="ELITE"?4:player.consistencyType==="HIGH"?2:0;return Math.round((.5+Math.pow(band,1.55)*34+continuity)*(1+noise)*100)/100;}
+
+export function decideRetentions(roster:AiPlayer[],difficulty:AiDifficulty,seed:string):RetentionDecision{
+  const ranked=roster.map(player=>{const learned=getLearnedMarketValue(player);const value=marketValue(player,difficulty,seed);const strength=playerStrength(player);const retentionProbability=learned?.retentionProbability??.5;const score=value*.55+strength*.24+retentionProbability*15+(player.consistencyType==="ELITE"?3:0);return{player,value,strength,retentionProbability,score};}).sort((a,b)=>b.score-a.score);
+  const core=ranked.filter(item=>item.strength>=62||item.value>=6||item.retentionProbability>=.62);
+  const bestCount=Math.min(4,core.length);
+  const picks:RetentionPick[]=core.slice(0,bestCount).map((item,index)=>({slot:(index+1) as 1|2|3|4,cost:RETENTION_COSTS[index],player:item.player,estimatedAuctionValue:item.value,reasons:[`Core player rated ${Math.round(item.strength)}`,`Expected auction value ₹${item.value.toFixed(2)} crore`,`${item.player.role} continuity`]}));
+  if(bestCount===4){const uncapped=ranked.find(item=>item.player.uncapped&&!picks.some(pick=>pick.player.id===item.player.id)&&(item.strength>=60||item.value>=3.2));if(uncapped)picks.push({slot:5,cost:4,player:uncapped.player,estimatedAuctionValue:uncapped.value,reasons:["Eligible uncapped fifth retention",`Core rating ${Math.round(uncapped.strength)}`,"₹4 crore uncapped slot"]});}
+  const totalCost=picks.reduce((sum,pick)=>sum+pick.cost,0);return{picks,totalCost,auctionPurse:MAX_AUCTION_PURSE-totalCost,releasedPlayerIds:roster.filter(player=>!picks.some(pick=>pick.player.id===player.id)).map(player=>player.id),reasons:[`${picks.length} retention${picks.length===1?"":"s"} selected`,`₹${totalCost} crore deducted from ₹${MAX_AUCTION_PURSE} crore`,picks.length<5?"Remaining players did not meet the core or uncapped criteria":"Maximum retention set used"]};
+}
+
+export type RetentionCalibration={runs:number;averageRetained:number;averageAuctionPurse:number;violations:number;passed:boolean;examples:string[]};
+export function calibrateRetentionAi(rosters:AiPlayer[][]):RetentionCalibration{let retained=0,purse=0,violations=0;const examples:string[]=[];rosters.forEach((roster,index)=>{const decision=decideRetentions(roster,"Competitive",`retention-${index}`);retained+=decision.picks.length;purse+=decision.auctionPurse;const expected=decision.picks.reduce((sum,pick)=>sum+RETENTION_COSTS[pick.slot-1],0);const errors=[decision.totalCost!==expected?"incorrect cost":null,decision.picks.length>5?"too many retentions":null,decision.picks[4]&&!decision.picks[4].player.uncapped?"fifth player is capped":null,decision.auctionPurse<66?"purse below legal minimum":null,new Set(decision.picks.map(pick=>pick.player.id)).size!==decision.picks.length?"duplicate player":null].filter(Boolean) as string[];violations+=errors.length;if(examples.length<6)examples.push(...errors.slice(0,6-examples.length));});return{runs:rosters.length,averageRetained:Math.round(retained/rosters.length*100)/100,averageAuctionPurse:Math.round(purse/rosters.length*100)/100,violations,passed:violations===0,examples};}

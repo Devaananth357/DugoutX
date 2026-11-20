@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 
 type Player={id:number;name:string;role:string;batting:number;bowling:number;form:number;confidence:number;uncapped?:boolean};
@@ -12,26 +12,45 @@ export function RetentionRoom(){
   const {code}=useParams<{code:string}>();
   const router=useRouter();
   const [room,setRoom]=useState<Room|null>(null);
-  const [manager,setManager]=useState("");
+  const [manager]=useState(()=>{if(typeof window==="undefined")return "";try{return JSON.parse(localStorage.getItem("dugoutx_user")||"{}").name||"";}catch{return "";}});
   const [selected,setSelected]=useState<number[]>([]);
   const [saving,setSaving]=useState(false);
   const [message,setMessage]=useState("");
+  const [connectionError,setConnectionError]=useState("");
+  const snapshotTag=useRef("");
+  const actionVersion=useRef(0);
+  const actionPending=useRef(false);
 
   useEffect(()=>{
-    const stored=localStorage.getItem("dugoutx_user");
-    if(stored){try{setManager(JSON.parse(stored).name||"");}catch{setManager("");}}
     let active=true;
-    const refresh=()=>fetch(`/api/rooms/${code}`,{cache:"no-store"}).then(async response=>{
-      if(!response.ok){router.replace("/seasons");return;}
-      const data=await response.json();
-      if(data.room.stage==="auction"){router.replace(`/seasons/auction/${code}`);return;}
-      if(data.room.stage!=="retention"){router.replace(`/seasons/room/${code}`);return;}
-      if(active)setRoom(data.room);
-    });
-    refresh();const timer=window.setInterval(refresh,1800);return()=>{active=false;window.clearInterval(timer);};
-  },[code,router]);
+    let timer:ReturnType<typeof setTimeout>;
+    const refresh=async()=>{
+      if(!active)return;
+      if(actionPending.current){timer=setTimeout(refresh,2500);return;}
+      const version=actionVersion.current;
+      try{
+        const response=await fetch(`/api/rooms/${code}?view=retention&manager=${encodeURIComponent(manager)}`,{cache:"no-store",headers:snapshotTag.current?{"If-None-Match":snapshotTag.current}:{}});
+        if(!active||version!==actionVersion.current)return;
+        if(response.status===304){setConnectionError("");return;}
+        if(!response.ok)throw new Error("Retention refresh failed");
+        const data=await response.json();
+        if(!active||version!==actionVersion.current)return;
+        if(data.room.stage==="auction"){router.replace(`/seasons/auction/${code}`);return;}
+        if(data.room.stage==="season"){router.replace(`/seasons/dashboard/${code}`);return;}
+        if(data.room.stage!=="retention"){router.replace(`/seasons/room/${code}`);return;}
+        snapshotTag.current=response.headers.get("etag")??"";
+        setRoom(data.room);
+        setConnectionError("");
+      }catch{
+        if(active)setConnectionError("Connection interrupted. Reconnecting…");
+      }finally{
+        if(active)timer=setTimeout(refresh,2500);
+      }
+    };
+    void refresh();return()=>{active=false;clearTimeout(timer);};
+  },[code,router,manager]);
 
-  if(!room)return <div className="room-loading">Opening retention room…</div>;
+  if(!room)return <div className="room-loading">Opening retention room…{connectionError&&<p role="status">{connectionError}</p>}</div>;
   const player=room.players.find(item=>item.name===manager);
   const teamState=room.retentions?.find(item=>item.team===player?.team);
   const confirmed=Boolean(teamState?.decision);
@@ -48,15 +67,24 @@ export function RetentionRoom(){
   }
 
   async function confirm(){
+    actionVersion.current++;actionPending.current=true;
     setSaving(true);setMessage("");
-    const response=await fetch(`/api/rooms/${code}`,{method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify({action:"retain",name:manager,playerIds:selected})});
-    const data=await response.json();setSaving(false);
-    if(!response.ok){setMessage(data.error);return;}
-    if(data.room.stage==="auction"){router.push(`/seasons/auction/${code}`);return;}
-    setRoom(data.room);
+    try{
+      const response=await fetch(`/api/rooms/${code}`,{method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify({action:"retain",name:manager,playerIds:selected})});
+      const data=await response.json();
+      if(!response.ok){setMessage(data.error??"Could not save retentions. Try again.");return;}
+      snapshotTag.current="";
+      if(data.room.stage==="auction"){router.push(`/seasons/auction/${code}`);return;}
+      setRoom(data.room);
+    }catch{
+      setMessage("Connection interrupted. Check your selection and try again.");
+    }finally{
+      actionVersion.current++;actionPending.current=false;setSaving(false);
+    }
   }
 
   return <section className="retention-shell">
+    {connectionError&&<p className="retention-message" role="status">{connectionError}</p>}
     <div className="retention-heading"><p className="eyebrow">SEASON PHASE 01 · {player?.team??"TEAM"}</p><h1>BUILD YOUR<br/><em>CORE.</em></h1><p>You are viewing only your franchise roster. Other human managers see their own teams, while unclaimed franchises have already made their AI retention choices.</p></div>
     <div className="retention-board">
       <div className="panel-heading"><span>{player?.team??"YOUR TEAM"} RETENTION</span><b>MAX PURSE · ₹120 CR</b></div>

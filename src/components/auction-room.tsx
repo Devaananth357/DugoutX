@@ -12,7 +12,7 @@ type Auction={cursor:number;total:number;currentBid:number|null;currentTeam:stri
 type AuctionRoomData={code:string;host:string;stage?:string;players:{name:string;team:string;host:boolean}[];auction:Auction};
 
 export function AuctionRoom(){
-  const {code}=useParams<{code:string}>();const router=useRouter();const [data,setData]=useState<AuctionRoomData|null>(null);const [manager]=useState(()=>{if(typeof window==="undefined")return "";try{return JSON.parse(localStorage.getItem("dugoutx_user")||"{}").name||"";}catch{return "";}});const [tab,setTab]=useState<"team"|"upcoming"|"recent"|"table">("upcoming");const [selectedTeam,setSelectedTeam]=useState("");const [busy,setBusy]=useState(false);const [message,setMessage]=useState("");const [salePopup,setSalePopup]=useState<Sale|null>(null);const [setPopup,setSetPopup]=useState<SetResult|null>(null);const [confirmSkip,setConfirmSkip]=useState(false);const [confirmTest,setConfirmTest]=useState(false);const seenSale=useRef(0);const seenSet=useRef(0);const actionVersion=useRef(0);const actionPending=useRef(false);
+  const {code}=useParams<{code:string}>();const router=useRouter();const [data,setData]=useState<AuctionRoomData|null>(null);const [manager]=useState(()=>{if(typeof window==="undefined")return "";try{return JSON.parse(localStorage.getItem("dugoutx_user")||"{}").name||"";}catch{return "";}});const [tab,setTab]=useState<"team"|"upcoming"|"recent"|"table">("upcoming");const [selectedTeam,setSelectedTeam]=useState("");const [busy,setBusy]=useState(false);const [message,setMessage]=useState("");const [salePopup,setSalePopup]=useState<Sale|null>(null);const [setPopup,setSetPopup]=useState<SetResult|null>(null);const [confirmSkip,setConfirmSkip]=useState(false);const [confirmTest,setConfirmTest]=useState(false);const seenSale=useRef(0);const seenSet=useRef(0);const actionVersion=useRef(0);const actionPending=useRef(false);const snapshotTag=useRef("");
   useEffect(() => {
     let active=true;
     let timer:ReturnType<typeof setTimeout>;
@@ -21,8 +21,9 @@ export function AuctionRoom(){
       if(actionPending.current){timer=setTimeout(refresh,1500);return;}
       const version=actionVersion.current;
       try{
-        const response=await fetch(`/api/rooms/${code}/auction`,{cache:"no-store"});
+        const response=await fetch(`/api/rooms/${code}/auction`,{cache:"no-store",headers:snapshotTag.current?{"If-None-Match":snapshotTag.current}:{}});
         if(!active||version!==actionVersion.current)return;
+        if(response.status===304){setMessage(previous=>previous==="Connection interrupted. Reconnecting…"?"":previous);return;}
         if(response.status===404){
           const season=await fetch(`/api/rooms/${code}/season`,{cache:"no-store"});
           if(!active||version!==actionVersion.current)return;
@@ -32,6 +33,7 @@ export function AuctionRoom(){
         const result:AuctionRoomData=await response.json();
         if(!active||version!==actionVersion.current)return;
         if(result.stage==="season"){router.replace(`/seasons/dashboard/${code}`);return;}
+        snapshotTag.current=response.headers.get("etag")??"";
         setData(result);
         setMessage(previous=>previous==="Connection interrupted. Reconnecting…"?"":previous);
       }catch{
@@ -58,6 +60,7 @@ export function AuctionRoom(){
       const result=await response.json();
       if(!response.ok){setMessage(result.error??"Could not update the auction. Try again.");setConfirmTest(false);return;}
       if(result.stage==="season"){router.push(`/seasons/dashboard/${code}`);return;}
+      snapshotTag.current=response.headers.get("etag")??"";
       setConfirmSkip(false);
       setData(result);
     }catch{

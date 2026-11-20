@@ -163,7 +163,11 @@ export function MatchCentre() {
   const { code, matchId } = useParams<{ code: string; matchId: string }>();
   const router = useRouter();
   const [data, setData] = useState<MatchData | null>(null);
-  const [manager, setManager] = useState("");
+  const [manager] = useState(() => {
+    if (typeof window === "undefined") return "";
+    try { return JSON.parse(localStorage.getItem("dugoutx_user") || "{}").name || ""; }
+    catch { return ""; }
+  });
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
@@ -175,43 +179,39 @@ export function MatchCentre() {
   const [nextBowler, setNextBowler] = useState<number | undefined>();
   const pollVersion = useRef(0);
   const mutationPending = useRef(false);
+  const snapshotTag = useRef("");
   useEffect(() => {
-    const stored = localStorage.getItem("dugoutx_user");
-    if (stored)
-      try {
-        setManager(JSON.parse(stored).name || "");
-      } catch {}
     let active = true;
-    let pollInFlight = false;
+    let timer: ReturnType<typeof setTimeout>;
     const refresh = async () => {
-      if (pollInFlight || mutationPending.current) return;
-      pollInFlight = true;
+      if (!active) return;
+      if (mutationPending.current) { timer = setTimeout(refresh, 2000); return; }
       const version = pollVersion.current;
       try {
         const response = await fetch(`/api/rooms/${code}/season/matches/${matchId}`, {
           cache: "no-store",
+          headers: snapshotTag.current ? { "If-None-Match": snapshotTag.current } : {},
         });
         if (!active || mutationPending.current || version !== pollVersion.current) return;
-        if (!response.ok) {
-          router.replace(`/seasons/dashboard/${code}`);
-          return;
-        }
+        if (response.status === 304) return;
+        if (!response.ok) throw new Error("Match refresh failed");
         const result: MatchData = await response.json();
-        if (active && !mutationPending.current && version === pollVersion.current)
+        if (active && !mutationPending.current && version === pollVersion.current) {
+          snapshotTag.current = response.headers.get("etag") ?? "";
           setData((current) => newerMatch(current, result));
+        }
       } catch {
         // The next poll can recover from a temporary network failure.
       } finally {
-        pollInFlight = false;
+        if (active) timer = setTimeout(refresh, 2000);
       }
     };
     void refresh();
-    const timer = window.setInterval(refresh, 1800);
     return () => {
       active = false;
-      window.clearInterval(timer);
+      clearTimeout(timer);
     };
-  }, [code, matchId, router]);
+  }, [code, matchId]);
   useEffect(() => {
     if (!data || !manager || selectedIds.length) return;
     const team = data.players.find((player) => player.name === manager)?.team;
@@ -232,7 +232,10 @@ export function MatchCentre() {
       });
       const result = await response.json();
       if (!response.ok) setMessage(result.error);
-      else setData((current) => newerMatch(current, result));
+      else {
+        snapshotTag.current = response.headers.get("etag") ?? "";
+        setData((current) => newerMatch(current, result));
+      }
     } catch {
       setMessage("Connection lost. Try again.");
     } finally {
@@ -269,10 +272,14 @@ export function MatchCentre() {
           });
           if (latest.ok) {
             const latestResult: MatchData = await latest.json();
+            snapshotTag.current = latest.headers.get("etag") ?? "";
             setData((current) => newerMatch(current, latestResult));
           }
         }
-      } else setData((current) => newerMatch(current, result));
+      } else {
+        snapshotTag.current = response.headers.get("etag") ?? "";
+        setData((current) => newerMatch(current, result));
+      }
     } catch {
       setMessage("Connection lost. Try again.");
     } finally {

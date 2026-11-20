@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 
 const teams = [["BLR","Bengaluru"],["CHE","Chennai"],["MUM","Mumbai"],["KOL","Kolkata"],["DEL","Delhi"],["HYD","Hyderabad"],["PUN","Punjab"],["RAJ","Rajasthan"],["LKN","Lucknow"],["GUJ","Gujarat"]] as const;
@@ -20,15 +20,18 @@ export function RoomLobby() {
   const [shiftError, setShiftError] = useState("");
   const [connectionError, setConnectionError] = useState("");
   const [starting, setStarting] = useState(false);
+  const snapshotTag = useRef("");
   useEffect(() => {
     let active=true;
     let timer:ReturnType<typeof setTimeout>;
     const refresh=async()=>{
       try{
-        const response=await fetch(`/api/rooms/${code}`,{cache:"no-store"});
+        const response=await fetch(`/api/rooms/${code}?view=lobby`,{cache:"no-store",headers:snapshotTag.current?{"If-None-Match":snapshotTag.current}:{}});
+        if(response.status===304){if(active)setConnectionError("");return;}
         if(!response.ok)throw new Error("Room refresh failed");
         const data=await response.json();
         if(!active)return;
+        snapshotTag.current=response.headers.get("etag")??"";
         if(data.room.stage==="auction"){router.replace(`/seasons/auction/${code}`);return;}
         if(data.room.stage==="retention"){router.replace(`/seasons/retention/${code}`);return;}
         if(data.room.stage==="season"){router.replace(`/seasons/dashboard/${code}`);return;}
@@ -37,7 +40,7 @@ export function RoomLobby() {
       }catch{
         if(active)setConnectionError("Connection interrupted. Reconnecting…");
       }finally{
-        if(active)timer=setTimeout(refresh,1800);
+        if(active)timer=setTimeout(refresh,2500);
       }
     };
     refresh(); return()=>{active=false;clearTimeout(timer);};

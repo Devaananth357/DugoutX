@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect,useMemo,useState } from "react";
+import { useEffect,useMemo,useRef,useState } from "react";
 import { useParams,useRouter } from "next/navigation";
 import { displayTeamCode } from "@/lib/team-representatives";
 
@@ -10,8 +10,8 @@ type SeasonData={code:string;host:string;testSeason?:boolean;players:{name:strin
 const leaderCards=[{title:"ORANGE CAP",metric:"RUNS",icon:"●",tone:"orange"},{title:"PURPLE CAP",metric:"WICKETS",icon:"◆",tone:"purple"},{title:"SEASON MVP",metric:"MVP POINTS",icon:"★",tone:"lime"},{title:"SUPER STRIKER",metric:"SIXES",icon:"↗",tone:"blue"}];
 
 export function SeasonDashboard(){
-  const {code}=useParams<{code:string}>();const router=useRouter();const [data,setData]=useState<SeasonData|null>(null);const [manager]=useState(()=>{if(typeof window==="undefined")return "";try{return JSON.parse(localStorage.getItem("dugoutx_user")||"{}").name||"";}catch{return "";}});const [scheduleView,setScheduleView]=useState<"all"|"mine">("mine");
-  useEffect(()=>{let active=true;const refresh=()=>fetch(`/api/rooms/${code}/season`,{cache:"no-store"}).then(async response=>{if(!active)return;if(!response.ok){router.replace("/seasons");return;}const season=await response.json();if(active)setData(season);});refresh();const timer=window.setInterval(refresh,5000);return()=>{active=false;window.clearInterval(timer);};},[code,router]);
+  const {code}=useParams<{code:string}>();const router=useRouter();const [data,setData]=useState<SeasonData|null>(null);const [manager]=useState(()=>{if(typeof window==="undefined")return "";try{return JSON.parse(localStorage.getItem("dugoutx_user")||"{}").name||"";}catch{return "";}});const [scheduleView,setScheduleView]=useState<"all"|"mine">("mine");const snapshotTag=useRef("");
+  useEffect(()=>{let active=true;let timer:ReturnType<typeof setTimeout>;const refresh=async()=>{if(!active)return;try{const response=await fetch(`/api/rooms/${code}/season`,{cache:"no-store",headers:snapshotTag.current?{"If-None-Match":snapshotTag.current}:{}});if(!active)return;if(response.status===304)return;if(!response.ok)throw new Error("Season refresh failed");const season=await response.json();if(active){snapshotTag.current=response.headers.get("etag")??"";setData(season);}}catch{/* Keep the current season visible and retry. */}finally{if(active)timer=setTimeout(refresh,5000);}};void refresh();return()=>{active=false;clearTimeout(timer);};},[code]);
   const team=data?.players.find(player=>player.name===manager)?.team;const fixtures=useMemo(()=>data?.fixtures.filter(match=>match.status!=="complete"&&(scheduleView==="all"||!team||match.home===team||match.away===team))??[],[data,scheduleView,team]);const recentResults=data?.fixtures.filter(match=>match.status==="complete").reverse()??[];const next=data?.fixtures.find(match=>match.status==="live")??(data&&data.currentMatch>=0?data.fixtures[data.currentMatch]:undefined)??data?.fixtures.find(match=>match.status==="upcoming");const isMyMatch=Boolean(next&&team&&(next.home===team||next.away===team));
   if(!data)return <div className="room-loading">Building fixtures and tables…</div>;
   return <section className="sx-dashboard">

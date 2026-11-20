@@ -262,6 +262,17 @@ async function readFirestoreDatabase(): Promise<Database | null> {
     roomsSnapshot.docs.map(async (roomDocument) => {
       const room = roomDocument.data() as Room;
       rememberDocument(`rooms/${roomDocument.id}`, room);
+      if (room.stage === "auction") {
+        const auctionDocument = await roomDocument.ref
+          .collection("state")
+          .doc("auction")
+          .get();
+        if (auctionDocument.exists) {
+          const auctionState = auctionDocument.data() as { auction?: RoomAuction };
+          rememberDocument(`rooms/${roomDocument.id}/state/auction`, auctionState);
+          room.auction = auctionState.auction ?? room.auction;
+        }
+      }
       if (!room.season) return room;
       const fixturesSnapshot = await roomDocument.ref
         .collection("fixtures")
@@ -341,6 +352,16 @@ async function writeFirestoreDatabase(database: Database) {
   }
 }
 
+async function writeFirestoreAuctionState(code: string, auction: RoomAuction) {
+  const key = `rooms/${code}/state/auction`;
+  const value = { auction };
+  const serialized = JSON.stringify(value);
+  if (persistedDocuments.get(key) === serialized) return;
+  const firestore = await getServerFirestore();
+  await firestore.collection("rooms").doc(code).collection("state").doc("auction").set(value);
+  persistedDocuments.set(key, serialized);
+}
+
 async function readDatabase(): Promise<Database> {
   if (cachedDatabase) return cachedDatabase;
   databaseInitialization ??= (async () => {
@@ -362,18 +383,24 @@ async function readDatabase(): Promise<Database> {
   return cachedDatabase;
 }
 
-async function writeDatabase(database: Database) {
+async function writeDatabase(database: Database, auctionCode?: string) {
   cachedDatabase = database;
-  const snapshot = structuredClone(database);
+  const auction = auctionCode && process.env.RENDER === "true"
+    ? database.rooms.find((room) => room.code === auctionCode)?.auction
+    : null;
+  const auctionSnapshot = auction ? structuredClone(auction) : null;
+  const snapshot = auctionSnapshot ? null : structuredClone(database);
   databaseWriteQueue = databaseWriteQueue
     .catch(() => undefined)
     .then(async () => {
-      if (process.env.RENDER === "true") {
-        await writeFirestoreDatabase(snapshot);
+      if (auctionSnapshot) {
+        await writeFirestoreAuctionState(auctionCode!, auctionSnapshot);
+      } else if (process.env.RENDER === "true") {
+        await writeFirestoreDatabase(snapshot!);
       } else {
         await Promise.all([
-          writeFirestoreDatabase(snapshot),
-          writeLocalDatabase(snapshot),
+          writeFirestoreDatabase(snapshot!),
+          writeLocalDatabase(snapshot!),
         ]);
       }
     });
@@ -845,7 +872,7 @@ export async function getAuctionRoom(code: string) {
   if (!auction.paused) processAuctionTick(room);
   const seasonStarted = startSeasonWhenAuctionIsReady(room);
   if (seasonStarted || JSON.stringify(room.auction) !== previousAuction) {
-    await writeDatabase(database);
+    await writeDatabase(database, seasonStarted ? undefined : room.code);
   }
   return room;
 }
@@ -897,7 +924,7 @@ export async function updateAuction(
     auction.paused = !auction.paused;
     auction.pendingAiBid = null;
     if (!auction.paused) scheduleAiBid(room);
-    await writeDatabase(database);
+    await writeDatabase(database, room.code);
     return room;
   }
   if (auction.paused) throw new Error("AUCTION_PAUSED");
@@ -1058,7 +1085,7 @@ export async function updateAuction(
     auction.interestByTeam = {};
     scheduleAiBid(room);
   }
-  await writeDatabase(database);
+  await writeDatabase(database, room.code);
   return room;
 }
 

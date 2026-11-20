@@ -16,9 +16,12 @@ export function AuctionRoom(){
   useEffect(() => {
     let active=true;
     let timer:ReturnType<typeof setTimeout>;
+    let pollInFlight=false;
+    const nextDelay=()=>document.visibilityState==="hidden"?3000:750;
     const refresh=async()=>{
-      if(!active)return;
-      if(actionPending.current){timer=setTimeout(refresh,1500);return;}
+      if(!active||pollInFlight)return;
+      if(actionPending.current){timer=setTimeout(refresh,nextDelay());return;}
+      pollInFlight=true;
       const version=actionVersion.current;
       try{
         const response=await fetch(`/api/rooms/${code}/auction`,{cache:"no-store",headers:snapshotTag.current?{"If-None-Match":snapshotTag.current}:{}});
@@ -39,11 +42,14 @@ export function AuctionRoom(){
       }catch{
         if(active)setMessage("Connection interrupted. Reconnecting…");
       }finally{
-        if(active)timer=setTimeout(refresh,1500);
+        pollInFlight=false;
+        if(active)timer=setTimeout(refresh,nextDelay());
       }
     };
+    const onVisible=()=>{if(document.visibilityState==="visible"&&!pollInFlight){clearTimeout(timer);void refresh();}};
+    document.addEventListener("visibilitychange",onVisible);
     refresh();
-    return()=>{active=false;clearTimeout(timer);};
+    return()=>{active=false;clearTimeout(timer);document.removeEventListener("visibilitychange",onVisible);};
   },[code,router]);
   const lastSaleAt=data?.auction.lastSale?.soldAt;
   useEffect(()=>{const sale=data?.auction.lastSale;if(!sale||data?.auction.lastSetResult?.processedAt===sale.soldAt||sale.soldAt===seenSale.current||Date.now()-sale.soldAt>4000)return;seenSale.current=sale.soldAt;setSalePopup(sale);const timer=window.setTimeout(()=>setSalePopup(null),Math.max(300,2500-(Date.now()-sale.soldAt)));return()=>window.clearTimeout(timer);},[lastSaleAt]);

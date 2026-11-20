@@ -5,7 +5,8 @@ export function snapshotTag(value: unknown): string {
 }
 
 export function notModified(request: Request, tag: string): Response | null {
-  if (request.headers.get("if-none-match") !== tag) return null;
+  const candidates = request.headers.get("if-none-match")?.split(",") ?? [];
+  if (!candidates.some((candidate) => candidate.trim().replace(/^W\//, "") === tag)) return null;
   return new Response(null, {
     status: 304,
     headers: { ETag: tag, "Cache-Control": "no-store" },
